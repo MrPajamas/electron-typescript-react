@@ -12,13 +12,13 @@ export const api = {
   sendMessage: (message: string) => {
     ipcRenderer.send('message', message)
   },
-
+  toggle: () => ipcRenderer.invoke('dark-mode:toggle'),
   /**
    * Provide an easier way to listen to events
    */
-  on: (channel: string, callback: Function) => {
-    ipcRenderer.on(channel, (_, data) => callback(data))
-  }
+  // on: (channel: string, callback: Function) => {
+  //   ipcRenderer.on(channel, (_, data) => callback(data))
+  // }
 }
 
 contextBridge.exposeInMainWorld('Main', api)

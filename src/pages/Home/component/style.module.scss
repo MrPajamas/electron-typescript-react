@@ -1,0 +1,31 @@
+.col {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.pointsList {
+  margin-top: 10px;
+
+  :global(.next-checkbox-wrapper) {
+    margin-bottom: 7px;
+  }
+}
+
+.linkTable {
+  :global(.next-table-inner .next-table-cell-wrapper) {
+    padding: 4px 16px;
+  }
+
+  :global(.next-table-cell) {
+    border-bottom: none;
+  }
+}
+
+
+.grouping {
+  padding: 5px 0;
+  :global(.next-btn) {
+    margin-right: 8px;
+  }
+}

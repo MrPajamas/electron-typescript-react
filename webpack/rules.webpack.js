@@ -26,5 +26,9 @@ module.exports = [
     options: {
       name: '[path][name].[ext]',
     },
+  },
+  {
+    test: /\.(css|scss|less)$/,
+    use:['style-loader','css-loader','sass-loader']
   }
 ]

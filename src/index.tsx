@@ -1,4 +1,14 @@
-import ReactDOM from "react-dom";
-import { App } from "./App";
+import { render } from "react-dom";
+import '@alifd/next/dist/next.css';
 
-ReactDOM.render(<App />, document.getElementById("root"));
+import Layout from './Layout'
+import App from "./App";
+import routerConfig from './routes';
+import { HashRouter } from 'react-router-dom';
+import { GlobalStyle } from './styles/GlobalStyle'
+render(
+  <HashRouter>
+    <GlobalStyle />
+    <Layout children={App} routerConfig={routerConfig} />
+  </HashRouter>,
+  document.getElementById("App"));
